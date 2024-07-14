@@ -1,3 +1,9 @@
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import java.io.File
+import java.io.InputStream
+
 object TrackingSimulator {
     var shipments = mutableListOf<Shipment>()
 
@@ -14,7 +20,15 @@ object TrackingSimulator {
         TODO()
     }
 
-    fun runSimulation() {
+    suspend fun runSimulation() {
+        val listOfLines = mutableListOf<String>()
 
+        File ("./src/main/resources/simulationItems.txt").reader().useLines{
+            lines ->lines.forEach {
+                listOfLines.add (it)
+                println(it)
+                delay(3000)
+            }
+        }
     }
 }
