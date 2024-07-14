@@ -1,7 +1,7 @@
 object TrackingSimulator {
     var shipments = mutableListOf<Shipment>()
 
-    fun findShipment(id: String) {
+    fun findShipment(id: String?) : Shipment? {
         TODO()
     }
 
@@ -10,6 +10,6 @@ object TrackingSimulator {
     }
 
     fun runSimulation() {
-        
+
     }
 }
