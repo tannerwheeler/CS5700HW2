@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>252</y><w>198</w><h>243</h></coordinates><panel_attributes>TrackerViewHelper
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>252</y><w>198</w><h>288</h></coordinates><panel_attributes>TrackerViewHelper
 --
 + shipmentId: State&lt;String&gt;
 + shipmentNotes: State&lt;String[]&gt;
@@ -9,11 +9,15 @@
 *all attributes have a private setter in this class
 
 --
++ trackShipment(id: String)
++ stopTracking()
+
+--
 _Responsibilities_
 - TrackerViewHelper has the responsibility of preparing data for the using interface to display
 
 style=wordwrap
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>378</x><y>126</y><w>198</w><h>90</h></coordinates><panel_attributes>ShippingUpdate
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>378</x><y>117</y><w>198</w><h>99</h></coordinates><panel_attributes>ShippingUpdate
 --
 + previousStatus: String
 + newStatus: String
@@ -59,14 +63,15 @@ bg=blue
 bg=blue
 You will want addShipment to be public because it will make doing the Strategy pattern a little easier.</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>990</x><y>360</y><w>126</w><h>126</h></coordinates><panel_attributes>style=wordwrap
 bg=blue
-runSimulation reads the file and handles the updates to the corresponding shipment. You can probably just call it when the app launches.</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>918</x><y>225</y><w>90</w><h>126</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;120;50;120;50;10;80;10</additional_attributes></element><element><id>Relation</id><coordinates><x>918</x><y>324</y><w>90</w><h>108</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;50;10;50;100;80;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>639</y><w>189</w><h>108</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+runSimulation reads the file and handles the updates to the corresponding shipment. You can probably just call it when the app launches.</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>918</x><y>225</y><w>90</w><h>126</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;120;50;120;50;10;80;10</additional_attributes></element><element><id>Relation</id><coordinates><x>918</x><y>324</y><w>90</w><h>108</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;50;10;50;100;80;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>639</y><w>189</w><h>117</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
 ShipmentObserver
 --
-+ notify()
 
 --
-# trackShipment(id: String)
-# stopTracking()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>378</x><y>594</y><w>198</w><h>162</h></coordinates><panel_attributes>style=wordwrap
++ getUpdate(update: ShippingUdate)
+
+style=wordwrap
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>378</x><y>594</y><w>198</w><h>162</h></coordinates><panel_attributes>style=wordwrap
 &lt;&lt;Abstract&gt;&gt;
 ShipmentSubject
 --
@@ -75,9 +80,11 @@ ShipmentSubject
 --
 + subscribe(observer: ShipmentObserver)
 + unsubscribe(observer: ShipmentObserver)
-+ notify()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>468</x><y>495</y><w>27</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>81</x><y>486</y><w>27</w><h>171</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;170;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>351</y><w>207</w><h>45</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;&gt;
++ notifyObservers()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>468</x><y>495</y><w>27</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>81</x><y>531</y><w>27</w><h>126</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>684</y><w>216</w><h>45</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;&gt;
 m1=0..*
 m2=0..*
-</panel_attributes><additional_attributes>10;20;210;20</additional_attributes></element><element><id>Relation</id><coordinates><x>468</x><y>207</y><w>45</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>468</x><y>207</y><w>45</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
 uses</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>567</x><y>153</y><w>279</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
-Creates</panel_attributes><additional_attributes>10;20;290;20;290;100</additional_attributes></element></diagram>
+Creates</panel_attributes><additional_attributes>10;20;290;20;290;100</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>162</y><w>216</w><h>540</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+uses</panel_attributes><additional_attributes>220;10;120;10;120;580;10;580</additional_attributes></element><element><id>Relation</id><coordinates><x>567</x><y>360</y><w>180</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+Creates</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element></diagram>
