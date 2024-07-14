@@ -1,11 +1,12 @@
 class Shipment(
-    val id: String
+    var status: String,
+    var id: String,
+    var expectedDeliveryDateTimestamp: Long,
+    var currentLocation: String
 ): ShipmentSubject() {
-    var status = String
-    val notes = mutableListOf<String>()
-    val updateHistory = mutableListOf<ShippingUpdate>()
-    val expectedDeliveryDateTimestamp = Long
-    val currentLocation = String
+    var notes = mutableListOf<String>()
+    var updateHistory = mutableListOf<ShippingUpdate>()
+        private set
 
     fun addNote(note: String) {
         notes.add(note)
@@ -13,6 +14,7 @@ class Shipment(
 
     fun addUpdate(update: ShippingUpdate) {
         updateHistory.add(update)
+        notifyObservers()
     }
 
     override fun notifyObservers() {

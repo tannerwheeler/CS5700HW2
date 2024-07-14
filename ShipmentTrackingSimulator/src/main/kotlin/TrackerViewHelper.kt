@@ -17,6 +17,7 @@ class TrackerViewHelper(
 
     override fun getUpdate(update: ShippingUpdate) {
         TODO("Not yet implemented")
+        shipmentStatus = update.newStatus
     }
 
     fun trackShipment(id: String) {
