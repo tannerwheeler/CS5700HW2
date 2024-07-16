@@ -9,5 +9,5 @@ abstract class ShipmentSubject {
         observers.remove(observer)
     }
 
-    abstract fun notifyObservers()
+    abstract fun notifyObservers(note: String?, history: String?)
 }

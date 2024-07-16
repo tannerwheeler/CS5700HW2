@@ -1,3 +1,7 @@
 abstract class ShipmentObserver {
-    abstract fun getUpdate(update: ShippingUpdate)
+    abstract fun notify(note: String?,
+                        history: String?,
+                        expectedShipmentDeliveryDate: Long?,
+                        status: String?,
+                        location: String?)
 }

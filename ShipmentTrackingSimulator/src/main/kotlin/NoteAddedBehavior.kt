@@ -7,7 +7,6 @@ class NoteAddedBehavior(
         if (data.size < dataLength) {
             return
         }
-
         TrackingSimulator.findShipment(data[1])?.addNote(data[3])
     }
 }

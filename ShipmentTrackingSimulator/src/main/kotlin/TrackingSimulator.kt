@@ -1,21 +1,7 @@
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import java.io.File
-import java.io.InputStream
 
 object TrackingSimulator {
-    enum class Action {
-        created,
-        shipped,
-        location,
-        delayed,
-        noteadded,
-        lost,
-        canceled,
-        delivered,
-    }
-
     private var shipments = mutableListOf<Shipment>()
 
     fun findShipment(id: String?) : Shipment? {
@@ -41,10 +27,9 @@ object TrackingSimulator {
         }
 
         listOfLines.forEach {
-            var shipmentAction = it.split(",")
-
-
-
+            val shipmentAction = it.split(",")
+            println(shipmentAction)
+            ActionFactory(shipmentAction.toMutableList()).callAction()
             delay(1000)
         }
     }

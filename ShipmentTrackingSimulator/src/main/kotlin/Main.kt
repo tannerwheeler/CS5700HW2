@@ -12,6 +12,7 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -22,7 +23,7 @@ import kotlinx.coroutines.launch
 @Preview
 fun App() {
     var shipmentIdFieldContent by remember { mutableStateOf("") }
-    var shipments = remember { mutableListOf<String>() }
+    val shipments = remember { mutableListOf<TrackerViewHelper>() }
     val coroutineScope = rememberCoroutineScope()
 
     coroutineScope.launch {
@@ -31,22 +32,19 @@ fun App() {
 
     MaterialTheme {
         Column {
-            TextField(shipmentIdFieldContent, onValueChange = {
-                shipmentIdFieldContent = it
-            })
+            Row {
+                TextField(shipmentIdFieldContent, onValueChange = {
+                    shipmentIdFieldContent = it
+                })
 
-            Button(onClick = {
-                shipments.add(shipmentIdFieldContent)
-                shipmentIdFieldContent = ""
-            }) {
-                Text("Track Shipment")
-            }
-
-            Button(onClick = {
-                shipments.remove(shipmentIdFieldContent)
-                shipmentIdFieldContent = ""
-            }) {
-                Text("Stop Tracking Shipment")
+                Button(onClick = {
+                    val viewHelper = TrackerViewHelper()
+                    TrackerViewHelper().trackShipment(shipmentIdFieldContent)
+                    shipments.add(viewHelper)
+                    shipmentIdFieldContent = ""
+                }) {
+                    Text("Track")
+                }
             }
 
             LazyColumn {
@@ -57,7 +55,39 @@ fun App() {
                             .border(1.dp, Color.Blue, RoundedCornerShape(4.dp))
                             .padding(4.dp)
                     ) {
-                        Text(it)
+                        if (it.shipment != null) {
+                            Column {
+                                Text("Tracking Shipment: ${it.shipmentId}", modifier = Modifier
+                                    .size(10.dp))
+                                Text("Status: ${it.shipmentStatus}")
+                                Text("Location: ${it.shipmentLocation}")
+                                Text("Expected Delivery: ${it.expectedShipmentDeliveryDate}")
+                                Text("")
+                                Text("Status Updates:")
+                                for (s in it.shipmentUpdateHistory) {
+                                    Text(s)
+                                }
+                                Text("")
+                                Text("Notes:")
+                                for (s in it.shipmentNotes) {
+                                    Text(s)
+                                }
+                            }
+                        }
+                        else {
+                            Column {
+                                Text("Shipment with id = ?", modifier = Modifier
+                                    .size(4.dp))
+                            }
+                            Column {
+                                Button(onClick = {
+                                    shipments.remove(it)
+                                    it.stopTracking()
+                                }) {
+                                    Text("X")
+                                }
+                            }
+                        }
                     }
                 }
             }

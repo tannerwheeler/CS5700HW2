@@ -11,8 +11,8 @@ class UpdateDeliveryTimeBehavior(
         val shipment = TrackingSimulator.findShipment(data[1])
         if (shipment != null) {
             val update = ShippingUpdate(shipment.status, data[0], data[2].toLong())
-            shipment.addUpdate(update)
             shipment.expectedDeliveryDateTimestamp = data[3].toLong()
+            shipment.addUpdate(update)
         }
     }
 }

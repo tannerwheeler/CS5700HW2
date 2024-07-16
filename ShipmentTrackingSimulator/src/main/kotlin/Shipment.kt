@@ -8,17 +8,26 @@ class Shipment(
     private var updateHistory = mutableListOf<ShippingUpdate>()
 
     fun addNote(note: String) {
-        notes.add(note)
-        notifyObservers()
+        this.notes.add(note)
+        this.notifyObservers(note,null)
     }
 
     fun addUpdate(update: ShippingUpdate) {
         updateHistory.add(update)
-        status = update.newStatus
-        notifyObservers()
+        this.status = update.newStatus
+        this.notifyObservers(null,
+            "Shipment went from ${update.previousStatus} " +
+                    "to ${this.status} " +
+                    "on ${update.timestamp}")
     }
 
-    override fun notifyObservers() {
-        TODO("not implemented")
+    override fun notifyObservers(note: String?, history: String?) {
+        observers.forEach {
+            it.notify(note,
+                history,
+                this.expectedDeliveryDateTimestamp,
+                this.status,
+                this.currentLocation)
+        }
     }
 }
