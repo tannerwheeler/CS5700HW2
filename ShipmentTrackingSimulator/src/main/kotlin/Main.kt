@@ -11,19 +11,21 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.launch
 
 @Composable
 @Preview
 fun App() {
     var shipmentIdFieldContent by remember { mutableStateOf("") }
-    val shipments = remember { mutableListOf<TrackerViewHelper>() }
+    val shipments = remember { mutableStateListOf<TrackerViewHelper>() }
     val coroutineScope = rememberCoroutineScope()
 
     coroutineScope.launch {
@@ -32,15 +34,20 @@ fun App() {
 
     MaterialTheme {
         Column {
-            Row {
-                TextField(shipmentIdFieldContent, onValueChange = {
-                    shipmentIdFieldContent = it
-                })
+            Row (
+                modifier = Modifier
+                    .fillMaxWidth()
+            ){
+                TextField(
+                    shipmentIdFieldContent,
+                    onValueChange = { shipmentIdFieldContent = it},
+                    placeholder = {Text("Shipment ID")},
+                )
 
                 Button(onClick = {
-                    val viewHelper = TrackerViewHelper()
-                    TrackerViewHelper().trackShipment(shipmentIdFieldContent)
-                    shipments.add(viewHelper)
+                    shipments.add(TrackerViewHelper(
+                        id=shipmentIdFieldContent
+                    ))
                     shipmentIdFieldContent = ""
                 }) {
                     Text("Track")
@@ -54,14 +61,39 @@ fun App() {
                             .padding(8.dp)
                             .border(1.dp, Color.Blue, RoundedCornerShape(4.dp))
                             .padding(4.dp)
+                            .fillMaxWidth()
                     ) {
                         if (it.shipment != null) {
+                            Column ( modifier = Modifier.padding(10.dp)){
+                                Button(onClick = {
+                                    it.stopTracking()
+                                    shipments.remove(it)
+                                }) {
+                                    Text("X")
+                                }
+                            }
                             Column {
-                                Text("Tracking Shipment: ${it.shipmentId}", modifier = Modifier
-                                    .size(10.dp))
-                                Text("Status: ${it.shipmentStatus}")
+                                Text("Tracking Shipment: ${it.shipmentId}",
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 30.sp)
+                                if (it.shipmentStatus != null) {
+                                    Text("Status: ${it.shipmentStatus}")
+                                }
+                                else {
+                                    Text("Status: --")
+                                }
+                                if (it.shipmentLocation != null) {
                                 Text("Location: ${it.shipmentLocation}")
+                                }
+                                else {
+                                    Text("Location: --")
+                                }
+                                if (it.expectedShipmentDeliveryDate != null) {
                                 Text("Expected Delivery: ${it.expectedShipmentDeliveryDate}")
+                                }
+                                else {
+                                    Text("Expected Delivery: --")
+                                }
                                 Text("")
                                 Text("Status Updates:")
                                 for (s in it.shipmentUpdateHistory) {
@@ -75,17 +107,15 @@ fun App() {
                             }
                         }
                         else {
-                            Column {
-                                Text("Shipment with id = ?", modifier = Modifier
-                                    .size(4.dp))
-                            }
-                            Column {
+                            Column ( modifier = Modifier.padding(10.dp)) {
                                 Button(onClick = {
                                     shipments.remove(it)
-                                    it.stopTracking()
                                 }) {
                                     Text("X")
                                 }
+                            }
+                            Column {
+                                Text("Shipment with id = ${it.shipmentId} not found")
                             }
                         }
                     }
@@ -96,6 +126,11 @@ fun App() {
 }
 
 fun main() = application {
+//    TrackingSimulator.runSimulation()
+//
+//    var viewer = TrackerViewHelper()
+//    viewer.trackShipment("s10000")
+
     Window(onCloseRequest = ::exitApplication) {
         App()
     }

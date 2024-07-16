@@ -1,3 +1,5 @@
+import java.util.*
+
 class Shipment(
     var status: String,
     var id: String,
@@ -18,7 +20,7 @@ class Shipment(
         this.notifyObservers(null,
             "Shipment went from ${update.previousStatus} " +
                     "to ${this.status} " +
-                    "on ${update.timestamp}")
+                    "on ${Date(update.timestamp).toString()}")
     }
 
     override fun notifyObservers(note: String?, history: String?) {

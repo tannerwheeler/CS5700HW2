@@ -3,6 +3,7 @@ abstract class ShipmentSubject {
 
     fun subscribe(observer: ShipmentObserver) {
         observers.add(observer)
+        this.notifyObservers(null, null)
     }
 
     fun unsubscribe(observer: ShipmentObserver) {

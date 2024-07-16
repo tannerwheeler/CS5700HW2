@@ -28,7 +28,6 @@ object TrackingSimulator {
 
         listOfLines.forEach {
             val shipmentAction = it.split(",")
-            println(shipmentAction)
             ActionFactory(shipmentAction.toMutableList()).callAction()
             delay(1000)
         }
