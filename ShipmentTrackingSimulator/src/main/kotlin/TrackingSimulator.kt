@@ -5,7 +5,7 @@ import java.io.File
 import java.io.InputStream
 
 object TrackingSimulator {
-    enum class ShipmentAction {
+    enum class Action {
         created,
         shipped,
         location,
@@ -16,7 +16,7 @@ object TrackingSimulator {
         delivered,
     }
 
-    var shipments = mutableListOf<Shipment>()
+    private var shipments = mutableListOf<Shipment>()
 
     fun findShipment(id: String?) : Shipment? {
         shipments.forEach {
@@ -28,7 +28,7 @@ object TrackingSimulator {
     }
 
     fun addShipment(shipment: Shipment) {
-        TODO()
+        shipments.add(shipment)
     }
 
     suspend fun runSimulation() {
@@ -37,7 +37,6 @@ object TrackingSimulator {
         File ("./src/main/resources/test.txt").reader().useLines{
             lines ->lines.forEach {
                 listOfLines.add (it)
-                println(it)
             }
         }
 

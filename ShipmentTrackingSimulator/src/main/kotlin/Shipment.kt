@@ -1,19 +1,20 @@
 class Shipment(
     var status: String,
     var id: String,
-    var expectedDeliveryDateTimestamp: Long,
-    var currentLocation: String
+    var expectedDeliveryDateTimestamp: Long?,
+    var currentLocation: String?
 ): ShipmentSubject() {
-    var notes = mutableListOf<String>()
-    var updateHistory = mutableListOf<ShippingUpdate>()
-        private set
+    private var notes = mutableListOf<String>()
+    private var updateHistory = mutableListOf<ShippingUpdate>()
 
     fun addNote(note: String) {
         notes.add(note)
+        notifyObservers()
     }
 
     fun addUpdate(update: ShippingUpdate) {
         updateHistory.add(update)
+        status = update.newStatus
         notifyObservers()
     }
 
