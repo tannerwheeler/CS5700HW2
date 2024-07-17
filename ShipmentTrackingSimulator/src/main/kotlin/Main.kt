@@ -23,7 +23,7 @@ import kotlinx.coroutines.launch
 
 @Composable
 @Preview
-fun App() {
+fun app() {
     var shipmentIdFieldContent by remember { mutableStateOf("") }
     val shipments = remember { mutableStateListOf<TrackerViewHelper>() }
     val coroutineScope = rememberCoroutineScope()
@@ -126,12 +126,7 @@ fun App() {
 }
 
 fun main() = application {
-//    TrackingSimulator.runSimulation()
-//
-//    var viewer = TrackerViewHelper()
-//    viewer.trackShipment("s10000")
-
     Window(onCloseRequest = ::exitApplication) {
-        App()
+        app()
     }
 }
