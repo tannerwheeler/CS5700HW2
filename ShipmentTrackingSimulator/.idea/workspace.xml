@@ -7,6 +7,7 @@
     <list default="true" id="f712fb11-11be-4f1f-a448-4febeed69b7b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestCreateBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestCreateBehavior.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +49,8 @@
     "Downloaded.Files.Path.Enabled": "false",
     "Gradle.Build ShipmentTrackingSimulator.executor": "Run",
     "Gradle.TestCreateBehavior.testCreateBehavior.executor": "Run",
+    "Gradle.TestCreateBehavior.testTooFewParametersIDCreateBehavior.executor": "Run",
+    "Gradle.TestCreateBehavior.testTooManyParametersIDCreateBehavior.executor": "Run",
     "Gradle.desktop.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -82,7 +85,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TestCreateBehavior.testCreateBehavior">
+  <component name="RunManager" selected="Gradle.TestCreateBehavior.testTooManyParametersIDCreateBehavior">
     <configuration name="TestCreateBehavior.testCreateBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -107,8 +110,58 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="TestCreateBehavior.testTooFewParametersIDCreateBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TestCreateBehavior.testTooFewParametersIDCreateBehavior&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestCreateBehavior.testTooManyParametersIDCreateBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TestCreateBehavior.testTooManyParametersIDCreateBehavior&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TestCreateBehavior.testTooManyParametersIDCreateBehavior" />
+        <item itemvalue="Gradle.TestCreateBehavior.testTooFewParametersIDCreateBehavior" />
         <item itemvalue="Gradle.TestCreateBehavior.testCreateBehavior" />
       </list>
     </recent_temporary>
@@ -129,7 +182,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720913417459</updated>
-      <workItem from="1720913418400" duration="35044000" />
+      <workItem from="1720913418400" duration="36407000" />
     </task>
     <servers />
   </component>
