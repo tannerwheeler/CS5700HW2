@@ -17,14 +17,19 @@ object TrackingSimulator {
         shipments.add(shipment)
     }
 
-    suspend fun runSimulation() {
+    fun readFile() : MutableList<String> {
         val listOfLines = mutableListOf<String>()
 
-        File ("./src/main/resources/test.txt").reader().useLines{
-            lines ->lines.forEach {
-                listOfLines.add (it)
+        File("./src/main/resources/test.txt").reader().useLines { lines ->
+            lines.forEach {
+                listOfLines.add(it)
             }
+            return listOfLines
         }
+    }
+
+    suspend fun runSimulation() {
+        val listOfLines = readFile().toMutableList()
 
         listOfLines.forEach {
             val shipmentAction = it.split(",")

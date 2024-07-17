@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f712fb11-11be-4f1f-a448-4febeed69b7b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestUpdateDeliveryTimeBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestUpdateDeliveryTimeBehavior.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TrackingSimulator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TrackingSimulator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestTrackingSimulator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestTrackingSimulator.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +60,7 @@
     "Gradle.Build ShipmentTrackingSimulator.executor": "Run",
     "Gradle.TestActionFactory.executor": "Run",
     "Gradle.TestActionFactory.testActionFactory.executor": "Run",
+    "Gradle.TestActionFactory.testActionFactoryBadCall.executor": "Run",
     "Gradle.TestCreateBehavior.testCreateBehavior.executor": "Run",
     "Gradle.TestCreateBehavior.testTooFewParametersIDCreateBehavior.executor": "Run",
     "Gradle.TestCreateBehavior.testTooManyParametersIDCreateBehavior.executor": "Run",
@@ -72,6 +75,7 @@
     "Gradle.TestLocationBehavior.testWeirdIDLocationBehavior.executor": "Run",
     "Gradle.TestNoteAddedBehavior.executor": "Run",
     "Gradle.TestNoteAddedBehavior.testNoteAddedBehaviorBadID.executor": "Run",
+    "Gradle.TestTrackingSimulator.executor": "Run",
     "Gradle.TestUpdateDeliveryTimeBehavior.executor": "Run",
     "Gradle.Tests in 'ShipmentTrackingSimulator.test'.executor": "Coverage",
     "Gradle.desktop.executor": "Run",
@@ -108,7 +112,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TestActionFactory.testActionFactoryBadCall">
+  <component name="RunManager" selected="Gradle.Tests in 'ShipmentTrackingSimulator.test'">
     <configuration name="TestActionFactory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -181,7 +185,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestUpdateDeliveryTimeBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestTrackingSimulator" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -194,7 +198,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestUpdateDeliveryTimeBehavior&quot;" />
+            <option value="&quot;TestTrackingSimulator&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -229,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'ShipmentTrackingSimulator.test'" />
+        <item itemvalue="Gradle.TestTrackingSimulator" />
         <item itemvalue="Gradle.TestActionFactory.testActionFactoryBadCall" />
         <item itemvalue="Gradle.TestActionFactory" />
         <item itemvalue="Gradle.TestActionFactory.testActionFactory" />
-        <item itemvalue="Gradle.Tests in 'ShipmentTrackingSimulator.test'" />
-        <item itemvalue="Gradle.TestUpdateDeliveryTimeBehavior" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +257,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720913417459</updated>
-      <workItem from="1720913418400" duration="44232000" />
+      <workItem from="1720913418400" duration="45049000" />
     </task>
     <servers />
   </component>
@@ -273,6 +277,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$TestGiveEndStatusBehavior.ic" NAME="TestGiveEndStatusBehavior Coverage Results" MODIFIED="1721184812617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$Tests_in__ShipmentTrackingSimulator_test_.ic" NAME="Tests in 'ShipmentTrackingSimulator.test' Coverage Results" MODIFIED="1721188684727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$Tests_in__ShipmentTrackingSimulator_test_.ic" NAME="Tests in 'ShipmentTrackingSimulator.test' Coverage Results" MODIFIED="1721191781922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
