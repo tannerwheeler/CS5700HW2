@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f712fb11-11be-4f1f-a448-4febeed69b7b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TrackerViewHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TrackerViewHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestTrackerViewHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestTrackerViewHelper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GiveEndStatusBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GiveEndStatusBehavior.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/LocationBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/LocationBehavior.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/NoteAddedBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/NoteAddedBehavior.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/SimulatorActionBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/SimulatorActionBehavior.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/UpdateDeliveryTimeBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/UpdateDeliveryTimeBehavior.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shipmentTrackingSimulatorUML.uxf" beforeDir="false" afterPath="$PROJECT_DIR$/../shipmentTrackingSimulatorUML.uxf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +81,7 @@
     "Gradle.TestNoteAddedBehavior.testNoteAddedBehaviorBadID.executor": "Run",
     "Gradle.TestTrackerViewHelper.executor": "Coverage",
     "Gradle.TestTrackerViewHelper.testCreateTrackViewHelper.executor": "Run",
+    "Gradle.TestTrackerViewHelper.testStopTracking.executor": "Run",
     "Gradle.TestTrackerViewHelper.testTrackShipment.executor": "Run",
     "Gradle.TestTrackingSimulator.executor": "Run",
     "Gradle.TestUpdateDeliveryTimeBehavior.executor": "Run",
@@ -115,7 +120,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TestTrackerViewHelper">
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="TestTrackerViewHelper" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -130,30 +135,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;TestTrackerViewHelper&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TestTrackerViewHelper.testCreateTrackViewHelper" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TestTrackerViewHelper.testCreateTrackViewHelper&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -234,13 +215,20 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="ShipmentTrackingSimulator.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Gradle.Tests in 'ShipmentTrackingSimulator.test'" />
         <item itemvalue="Gradle.TestTrackerViewHelper" />
         <item itemvalue="Gradle.TestTrackerViewHelper.testStopTracking" />
         <item itemvalue="Gradle.TestTrackerViewHelper.testTrackShipment" />
-        <item itemvalue="Gradle.TestTrackerViewHelper.testCreateTrackViewHelper" />
-        <item itemvalue="Gradle.Tests in 'ShipmentTrackingSimulator.test'" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +248,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720913417459</updated>
-      <workItem from="1720913418400" duration="46717000" />
+      <workItem from="1720913418400" duration="48581000" />
     </task>
     <servers />
   </component>
@@ -279,8 +267,8 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$TestTrackerViewHelper.ic" NAME="TestTrackerViewHelper Coverage Results" MODIFIED="1721193449519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$TestTrackerViewHelper.ic" NAME="TestTrackerViewHelper Coverage Results" MODIFIED="1721193643082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$TestGiveEndStatusBehavior.ic" NAME="TestGiveEndStatusBehavior Coverage Results" MODIFIED="1721184812617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$Tests_in__ShipmentTrackingSimulator_test_.ic" NAME="Tests in 'ShipmentTrackingSimulator.test' Coverage Results" MODIFIED="1721191781922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$Tests_in__ShipmentTrackingSimulator_test_.ic" NAME="Tests in 'ShipmentTrackingSimulator.test' Coverage Results" MODIFIED="1721195175643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

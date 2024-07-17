@@ -10,7 +10,7 @@ class LocationBehavior(
     }
 
     override fun performAction() {
-        val shipment = TrackingSimulator.findShipment(data[1])
+        val shipment = findShipment()
         require(shipment != null) { "Shipment not found during Location Behavior" }
 
         shipment.currentLocation = data[3]

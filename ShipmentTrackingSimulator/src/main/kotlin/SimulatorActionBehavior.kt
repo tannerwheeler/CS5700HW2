@@ -3,4 +3,7 @@ abstract class SimulatorActionBehavior(
 ) {
     abstract var dataLength: Int
     abstract fun performAction()
+    protected fun findShipment() : Shipment? {
+        return TrackingSimulator.findShipment(data[1])
+    }
 }

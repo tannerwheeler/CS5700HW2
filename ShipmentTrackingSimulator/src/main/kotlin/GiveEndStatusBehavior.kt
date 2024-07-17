@@ -10,7 +10,7 @@ class GiveEndStatusBehavior(
     }
 
     override fun performAction() {
-        val shipment = TrackingSimulator.findShipment(data[1])
+        val shipment = findShipment()
         require(shipment != null) { "Shipment not found during GiveEndStatusBehavior" }
 
         val update = ShippingUpdate(shipment.status, data[0], data[2].toLong())

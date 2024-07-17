@@ -10,7 +10,7 @@ class NoteAddedBehavior(
     }
 
     override fun performAction() {
-        val shipment = TrackingSimulator.findShipment(data[1])
+        val shipment = findShipment()
         require(shipment != null) { "Could not find Shipment during NoteAddedBehavior" }
         shipment.addNote(data[3])
     }
