@@ -3,14 +3,17 @@ class GiveEndStatusBehavior(
 ) : SimulatorActionBehavior(data) {
     override var dataLength: Int = 3
 
+    init {
+        require(data.size == dataLength) {
+            "CreateBehavior data parameter must be of size 3"
+        }
+    }
+
     override fun performAction() {
-        if (data.size < dataLength) {
-            return
-        }
         val shipment = TrackingSimulator.findShipment(data[1])
-        if (shipment != null) {
-            val update = ShippingUpdate(shipment.status, data[0], data[2].toLong())
-            shipment.addUpdate(update)
-        }
+        require(shipment != null) { "Shipment not found during GiveEndStatusBehavior" }
+
+        val update = ShippingUpdate(shipment.status, data[0], data[2].toLong())
+        shipment.addUpdate(update)
     }
 }

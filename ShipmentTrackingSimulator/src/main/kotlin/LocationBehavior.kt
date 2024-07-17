@@ -3,11 +3,17 @@ class LocationBehavior(
 ) : SimulatorActionBehavior(data) {
     override var dataLength: Int = 4
 
-    override fun performAction() {
-        if (data.size < dataLength) {
-            return
+    init {
+        require(data.size == dataLength) {
+            "CreateBehavior data parameter must be of size 4"
         }
-        TrackingSimulator.findShipment(data[1])?.currentLocation = data[3]
-        TrackingSimulator.findShipment(data[1])?.notifyObservers(null, null)
+    }
+
+    override fun performAction() {
+        val shipment = TrackingSimulator.findShipment(data[1])
+        require(shipment != null) { "Shipment not found during Location Behavior" }
+
+        shipment.currentLocation = data[3]
+        shipment.notifyObservers(null, null)
     }
 }

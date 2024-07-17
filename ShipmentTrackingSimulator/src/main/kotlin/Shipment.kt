@@ -6,8 +6,8 @@ class Shipment(
     var expectedDeliveryDateTimestamp: Long?,
     var currentLocation: String?
 ): ShipmentSubject() {
-    private var notes = mutableListOf<String>()
-    private var updateHistory = mutableListOf<ShippingUpdate>()
+    var notes = mutableListOf<String>()
+    var updateHistory = mutableListOf<ShippingUpdate>()
 
     fun addNote(note: String) {
         this.notes.add(note)

@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f712fb11-11be-4f1f-a448-4febeed69b7b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestCreateBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestCreateBehavior.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GiveEndStatusBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GiveEndStatusBehavior.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Shipment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Shipment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestGiveEndStatusBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestGiveEndStatusBehavior.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +19,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,6 +62,11 @@
     "Gradle.TestCreateBehavior.testCreateBehavior.executor": "Run",
     "Gradle.TestCreateBehavior.testTooFewParametersIDCreateBehavior.executor": "Run",
     "Gradle.TestCreateBehavior.testTooManyParametersIDCreateBehavior.executor": "Run",
+    "Gradle.TestGiveEndStatusBehavior.executor": "Coverage",
+    "Gradle.TestGiveEndStatusBehavior.testBasicGiveEndStatusBehavior.executor": "Run",
+    "Gradle.TestGiveEndStatusBehavior.testTooFewParametersIDGiveEndStatusBehavior.executor": "Run",
+    "Gradle.TestGiveEndStatusBehavior.testTooManyParametersIDGiveEndStatusBehavior.executor": "Run",
+    "Gradle.TestGiveEndStatusBehavior.testWeirdIDGiveEndStatusBehavior.executor": "Run",
     "Gradle.desktop.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -85,8 +101,8 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TestCreateBehavior.testTooManyParametersIDCreateBehavior">
-    <configuration name="TestCreateBehavior.testCreateBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.TestGiveEndStatusBehavior">
+    <configuration name="TestGiveEndStatusBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -99,7 +115,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestCreateBehavior.testCreateBehavior&quot;" />
+            <option value="&quot;TestGiveEndStatusBehavior&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -110,7 +126,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestCreateBehavior.testTooFewParametersIDCreateBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestGiveEndStatusBehavior.testBasicGiveEndStatusBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -123,7 +139,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestCreateBehavior.testTooFewParametersIDCreateBehavior&quot;" />
+            <option value="&quot;TestGiveEndStatusBehavior.testBasicGiveEndStatusBehavior&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -134,7 +150,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestCreateBehavior.testTooManyParametersIDCreateBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestGiveEndStatusBehavior.testTooFewParametersIDGiveEndStatusBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -147,7 +163,55 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestCreateBehavior.testTooManyParametersIDCreateBehavior&quot;" />
+            <option value="&quot;TestGiveEndStatusBehavior.testTooFewParametersIDGiveEndStatusBehavior&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestGiveEndStatusBehavior.testTooManyParametersIDGiveEndStatusBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TestGiveEndStatusBehavior.testTooManyParametersIDGiveEndStatusBehavior&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestGiveEndStatusBehavior.testWeirdIDGiveEndStatusBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TestGiveEndStatusBehavior.testWeirdIDGiveEndStatusBehavior&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -160,9 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TestCreateBehavior.testTooManyParametersIDCreateBehavior" />
-        <item itemvalue="Gradle.TestCreateBehavior.testTooFewParametersIDCreateBehavior" />
-        <item itemvalue="Gradle.TestCreateBehavior.testCreateBehavior" />
+        <item itemvalue="Gradle.TestGiveEndStatusBehavior" />
+        <item itemvalue="Gradle.TestGiveEndStatusBehavior.testTooManyParametersIDGiveEndStatusBehavior" />
+        <item itemvalue="Gradle.TestGiveEndStatusBehavior.testTooFewParametersIDGiveEndStatusBehavior" />
+        <item itemvalue="Gradle.TestGiveEndStatusBehavior.testWeirdIDGiveEndStatusBehavior" />
+        <item itemvalue="Gradle.TestGiveEndStatusBehavior.testBasicGiveEndStatusBehavior" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +248,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720913417459</updated>
-      <workItem from="1720913418400" duration="36407000" />
+      <workItem from="1720913418400" duration="38125000" />
     </task>
     <servers />
   </component>
@@ -199,5 +265,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$TestGiveEndStatusBehavior.ic" NAME="TestGiveEndStatusBehavior Coverage Results" MODIFIED="1721184812617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
