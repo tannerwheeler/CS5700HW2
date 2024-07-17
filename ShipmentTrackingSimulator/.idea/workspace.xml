@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f712fb11-11be-4f1f-a448-4febeed69b7b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TrackingSimulator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TrackingSimulator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestTrackingSimulator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestTrackingSimulator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TrackerViewHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TrackerViewHelper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestTrackerViewHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestTrackerViewHelper.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +75,9 @@
     "Gradle.TestLocationBehavior.testWeirdIDLocationBehavior.executor": "Run",
     "Gradle.TestNoteAddedBehavior.executor": "Run",
     "Gradle.TestNoteAddedBehavior.testNoteAddedBehaviorBadID.executor": "Run",
+    "Gradle.TestTrackerViewHelper.executor": "Coverage",
+    "Gradle.TestTrackerViewHelper.testCreateTrackViewHelper.executor": "Run",
+    "Gradle.TestTrackerViewHelper.testTrackShipment.executor": "Run",
     "Gradle.TestTrackingSimulator.executor": "Run",
     "Gradle.TestUpdateDeliveryTimeBehavior.executor": "Run",
     "Gradle.Tests in 'ShipmentTrackingSimulator.test'.executor": "Coverage",
@@ -112,8 +115,8 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'ShipmentTrackingSimulator.test'">
-    <configuration name="TestActionFactory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.TestTrackerViewHelper">
+    <configuration name="TestTrackerViewHelper" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -126,7 +129,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestActionFactory&quot;" />
+            <option value="&quot;TestTrackerViewHelper&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -137,7 +140,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestActionFactory.testActionFactory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestTrackerViewHelper.testCreateTrackViewHelper" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -150,7 +153,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestActionFactory.testActionFactory&quot;" />
+            <option value="&quot;TestTrackerViewHelper.testCreateTrackViewHelper&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -161,7 +164,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestActionFactory.testActionFactoryBadCall" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestTrackerViewHelper.testStopTracking" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -174,7 +177,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestActionFactory.testActionFactoryBadCall&quot;" />
+            <option value="&quot;TestTrackerViewHelper.testStopTracking&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -185,7 +188,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestTrackingSimulator" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestTrackerViewHelper.testTrackShipment" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -198,7 +201,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestTrackingSimulator&quot;" />
+            <option value="&quot;TestTrackerViewHelper.testTrackShipment&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -233,11 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TestTrackerViewHelper" />
+        <item itemvalue="Gradle.TestTrackerViewHelper.testStopTracking" />
+        <item itemvalue="Gradle.TestTrackerViewHelper.testTrackShipment" />
+        <item itemvalue="Gradle.TestTrackerViewHelper.testCreateTrackViewHelper" />
         <item itemvalue="Gradle.Tests in 'ShipmentTrackingSimulator.test'" />
-        <item itemvalue="Gradle.TestTrackingSimulator" />
-        <item itemvalue="Gradle.TestActionFactory.testActionFactoryBadCall" />
-        <item itemvalue="Gradle.TestActionFactory" />
-        <item itemvalue="Gradle.TestActionFactory.testActionFactory" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +260,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720913417459</updated>
-      <workItem from="1720913418400" duration="45049000" />
+      <workItem from="1720913418400" duration="46717000" />
     </task>
     <servers />
   </component>
@@ -276,6 +279,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$TestTrackerViewHelper.ic" NAME="TestTrackerViewHelper Coverage Results" MODIFIED="1721193449519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$TestGiveEndStatusBehavior.ic" NAME="TestGiveEndStatusBehavior Coverage Results" MODIFIED="1721184812617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$Tests_in__ShipmentTrackingSimulator_test_.ic" NAME="Tests in 'ShipmentTrackingSimulator.test' Coverage Results" MODIFIED="1721191781922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>

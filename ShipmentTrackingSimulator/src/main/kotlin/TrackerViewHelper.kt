@@ -8,7 +8,7 @@ class TrackerViewHelper(
 ) : ShipmentObserver() {
     var shipment: Shipment? = null
         private set
-    var shipmentId by mutableStateOf<String>("")
+    var shipmentId by mutableStateOf("")
         private set
     var shipmentNotes by mutableStateOf(mutableListOf<String>())
         private set
@@ -23,7 +23,7 @@ class TrackerViewHelper(
 
     init {
         this.shipmentId = id
-        trackShipment(this.shipmentId.toString())
+        trackShipment(this.shipmentId)
     }
 
     override fun notify(note: String?,
@@ -49,7 +49,7 @@ class TrackerViewHelper(
     }
 
     fun trackShipment(id: String) {
-        shipment = TrackingSimulator.findShipment(this.shipmentId)
+        this.shipment = TrackingSimulator.findShipment(this.shipmentId)
         shipment?.subscribe(this)
     }
 
