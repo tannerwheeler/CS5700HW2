@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
-import kotlin.test.assertNotEquals
 
 class TestUpdateDeliveryTimeBehavior {
     private val s_endStatus = CreateBehavior(mutableListOf("created", "s1000s", "10002928849"))
@@ -17,7 +16,7 @@ class TestUpdateDeliveryTimeBehavior {
         assertEquals(0, shipment?.updateHistory?.size)
 
         shipped.performAction()
-        assertNotEquals(null, shipment)
+        assertEquals("1000093283883".toLong(), shipment?.expectedDeliveryDateTimestamp)
         assertEquals("s1000s", shipment?.id)
         assertEquals("shipped", shipment?.status)
         assertEquals(null, shipment?.currentLocation)
@@ -31,7 +30,7 @@ class TestUpdateDeliveryTimeBehavior {
         val shipped = UpdateDeliveryTimeBehavior(mutableListOf("shipped", "tandllesl", "10002928849", "1000093283883"))
         shipped.performAction()
         val shipment = TrackingSimulator.findShipment("tandllesl")
-        assertNotEquals(null, shipment)
+        assertEquals("1000093283883".toLong(), shipment?.expectedDeliveryDateTimestamp)
         assertEquals("tandllesl", shipment?.id)
         assertEquals("shipped", shipment?.status)
         assertEquals(null, shipment?.currentLocation)

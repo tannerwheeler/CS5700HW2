@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f712fb11-11be-4f1f-a448-4febeed69b7b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/NoteAddedBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/NoteAddedBehavior.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestGiveEndStatusBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestGiveEndStatusBehavior.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestLocationBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestLocationBehavior.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestNoteAddedBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestNoteAddedBehavior.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestUpdateDeliveryTimeBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestUpdateDeliveryTimeBehavior.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +56,8 @@
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
     "Gradle.Build ShipmentTrackingSimulator.executor": "Run",
+    "Gradle.TestActionFactory.executor": "Run",
+    "Gradle.TestActionFactory.testActionFactory.executor": "Run",
     "Gradle.TestCreateBehavior.testCreateBehavior.executor": "Run",
     "Gradle.TestCreateBehavior.testTooFewParametersIDCreateBehavior.executor": "Run",
     "Gradle.TestCreateBehavior.testTooManyParametersIDCreateBehavior.executor": "Run",
@@ -111,7 +108,55 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'ShipmentTrackingSimulator.test'">
+  <component name="RunManager" selected="Gradle.TestActionFactory">
+    <configuration name="TestActionFactory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TestActionFactory&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestActionFactory.testActionFactory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TestActionFactory.testActionFactory&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="TestGiveEndStatusBehavior.testGiveEndStatusBehaviorBadID" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -126,54 +171,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;TestGiveEndStatusBehavior.testGiveEndStatusBehaviorBadID&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TestLocationBehavior.testLocationBehaviorBadID" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TestLocationBehavior.testLocationBehaviorBadID&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="TestNoteAddedBehavior.testNoteAddedBehaviorBadID" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TestNoteAddedBehavior.testNoteAddedBehaviorBadID&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -232,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TestActionFactory" />
+        <item itemvalue="Gradle.TestActionFactory.testActionFactory" />
         <item itemvalue="Gradle.Tests in 'ShipmentTrackingSimulator.test'" />
         <item itemvalue="Gradle.TestUpdateDeliveryTimeBehavior" />
         <item itemvalue="Gradle.TestGiveEndStatusBehavior.testGiveEndStatusBehaviorBadID" />
-        <item itemvalue="Gradle.TestLocationBehavior.testLocationBehaviorBadID" />
-        <item itemvalue="Gradle.TestNoteAddedBehavior.testNoteAddedBehaviorBadID" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +253,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720913417459</updated>
-      <workItem from="1720913418400" duration="41961000" />
+      <workItem from="1720913418400" duration="44232000" />
     </task>
     <servers />
   </component>
