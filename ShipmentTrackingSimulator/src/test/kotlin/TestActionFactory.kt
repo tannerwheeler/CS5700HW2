@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Assertions.assertNotEquals
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFailsWith
 
 class TestActionFactory {
     @Test
@@ -71,5 +72,11 @@ class TestActionFactory {
         assertEquals("Los Angeles CA", shipment?.currentLocation)
         assertEquals(5, shipment?.updateHistory?.size)
         assertEquals(1, shipment?.notes?.size)
+    }
+
+    @Test
+    fun testActionFactoryBadCall() {
+        val block : () -> Unit = { ActionFactory(mutableListOf("badCall", "tandllesll", "10002928849", "Los Angeles, CA")).callAction() }
+        assertFailsWith<IllegalArgumentException> { block() }
     }
 }

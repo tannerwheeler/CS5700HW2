@@ -108,7 +108,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TestActionFactory">
+  <component name="RunManager" selected="Gradle.TestActionFactory.testActionFactoryBadCall">
     <configuration name="TestActionFactory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -157,7 +157,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestGiveEndStatusBehavior.testGiveEndStatusBehaviorBadID" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestActionFactory.testActionFactoryBadCall" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -170,7 +170,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestGiveEndStatusBehavior.testGiveEndStatusBehaviorBadID&quot;" />
+            <option value="&quot;TestActionFactory.testActionFactoryBadCall&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -229,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TestActionFactory.testActionFactoryBadCall" />
         <item itemvalue="Gradle.TestActionFactory" />
         <item itemvalue="Gradle.TestActionFactory.testActionFactory" />
         <item itemvalue="Gradle.Tests in 'ShipmentTrackingSimulator.test'" />
         <item itemvalue="Gradle.TestUpdateDeliveryTimeBehavior" />
-        <item itemvalue="Gradle.TestGiveEndStatusBehavior.testGiveEndStatusBehaviorBadID" />
       </list>
     </recent_temporary>
   </component>
