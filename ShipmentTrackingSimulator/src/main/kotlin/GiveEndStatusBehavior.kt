@@ -5,7 +5,7 @@ class GiveEndStatusBehavior(
 
     init {
         require(data.size == dataLength) {
-            "CreateBehavior data parameter must be of size 3"
+            "GiveEndStatusBehavior data parameter must be of size 3"
         }
     }
 

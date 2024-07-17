@@ -11,6 +11,7 @@ class ActionFactory(
             "lost" -> GiveEndStatusBehavior(data).performAction()
             "canceled" -> GiveEndStatusBehavior(data).performAction()
             "delivered" -> GiveEndStatusBehavior(data).performAction()
+            else -> println("Unknown action type")//TODO("Any other input")
         }
     }
 }

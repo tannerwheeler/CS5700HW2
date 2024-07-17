@@ -5,7 +5,7 @@ class LocationBehavior(
 
     init {
         require(data.size == dataLength) {
-            "CreateBehavior data parameter must be of size 4"
+            "LocationBehavior data parameter must be of size 4"
         }
     }
 
