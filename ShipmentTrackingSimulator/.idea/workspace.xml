@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f712fb11-11be-4f1f-a448-4febeed69b7b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ActionFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ActionFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GiveEndStatusBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GiveEndStatusBehavior.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/LocationBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/LocationBehavior.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/UpdateDeliveryTimeBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/UpdateDeliveryTimeBehavior.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/NoteAddedBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/NoteAddedBehavior.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestGiveEndStatusBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestGiveEndStatusBehavior.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestLocationBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestLocationBehavior.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestNoteAddedBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestNoteAddedBehavior.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestUpdateDeliveryTimeBehavior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestUpdateDeliveryTimeBehavior.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,13 +64,19 @@
     "Gradle.TestCreateBehavior.testCreateBehavior.executor": "Run",
     "Gradle.TestCreateBehavior.testTooFewParametersIDCreateBehavior.executor": "Run",
     "Gradle.TestCreateBehavior.testTooManyParametersIDCreateBehavior.executor": "Run",
-    "Gradle.TestGiveEndStatusBehavior.executor": "Coverage",
+    "Gradle.TestGiveEndStatusBehavior.executor": "Run",
     "Gradle.TestGiveEndStatusBehavior.testBasicGiveEndStatusBehavior.executor": "Run",
+    "Gradle.TestGiveEndStatusBehavior.testGiveEndStatusBehaviorBadID.executor": "Run",
     "Gradle.TestGiveEndStatusBehavior.testTooFewParametersIDGiveEndStatusBehavior.executor": "Run",
     "Gradle.TestGiveEndStatusBehavior.testTooManyParametersIDGiveEndStatusBehavior.executor": "Run",
     "Gradle.TestGiveEndStatusBehavior.testWeirdIDGiveEndStatusBehavior.executor": "Run",
     "Gradle.TestLocationBehavior.executor": "Run",
+    "Gradle.TestLocationBehavior.testLocationBehaviorBadID.executor": "Run",
     "Gradle.TestLocationBehavior.testWeirdIDLocationBehavior.executor": "Run",
+    "Gradle.TestNoteAddedBehavior.executor": "Run",
+    "Gradle.TestNoteAddedBehavior.testNoteAddedBehaviorBadID.executor": "Run",
+    "Gradle.TestUpdateDeliveryTimeBehavior.executor": "Run",
+    "Gradle.Tests in 'ShipmentTrackingSimulator.test'.executor": "Coverage",
     "Gradle.desktop.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -106,8 +111,8 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TestLocationBehavior">
-    <configuration name="TestGiveEndStatusBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Tests in 'ShipmentTrackingSimulator.test'">
+    <configuration name="TestGiveEndStatusBehavior.testGiveEndStatusBehaviorBadID" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -120,7 +125,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestGiveEndStatusBehavior&quot;" />
+            <option value="&quot;TestGiveEndStatusBehavior.testGiveEndStatusBehaviorBadID&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -131,7 +136,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestGiveEndStatusBehavior.testTooFewParametersIDGiveEndStatusBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestLocationBehavior.testLocationBehaviorBadID" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -144,7 +149,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestGiveEndStatusBehavior.testTooFewParametersIDGiveEndStatusBehavior&quot;" />
+            <option value="&quot;TestLocationBehavior.testLocationBehaviorBadID&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -155,7 +160,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestGiveEndStatusBehavior.testTooManyParametersIDGiveEndStatusBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestNoteAddedBehavior.testNoteAddedBehaviorBadID" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -168,7 +173,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestGiveEndStatusBehavior.testTooManyParametersIDGiveEndStatusBehavior&quot;" />
+            <option value="&quot;TestNoteAddedBehavior.testNoteAddedBehaviorBadID&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -179,7 +184,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestLocationBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestUpdateDeliveryTimeBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -192,7 +197,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;TestLocationBehavior&quot;" />
+            <option value="&quot;TestUpdateDeliveryTimeBehavior&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -203,7 +208,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestLocationBehavior.testWeirdIDLocationBehavior" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'ShipmentTrackingSimulator.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -215,8 +220,6 @@
         <option name="taskNames">
           <list>
             <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TestLocationBehavior.testWeirdIDLocationBehavior&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -229,11 +232,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TestLocationBehavior" />
-        <item itemvalue="Gradle.TestLocationBehavior.testWeirdIDLocationBehavior" />
-        <item itemvalue="Gradle.TestGiveEndStatusBehavior" />
-        <item itemvalue="Gradle.TestGiveEndStatusBehavior.testTooManyParametersIDGiveEndStatusBehavior" />
-        <item itemvalue="Gradle.TestGiveEndStatusBehavior.testTooFewParametersIDGiveEndStatusBehavior" />
+        <item itemvalue="Gradle.Tests in 'ShipmentTrackingSimulator.test'" />
+        <item itemvalue="Gradle.TestUpdateDeliveryTimeBehavior" />
+        <item itemvalue="Gradle.TestGiveEndStatusBehavior.testGiveEndStatusBehaviorBadID" />
+        <item itemvalue="Gradle.TestLocationBehavior.testLocationBehaviorBadID" />
+        <item itemvalue="Gradle.TestNoteAddedBehavior.testNoteAddedBehaviorBadID" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +256,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720913417459</updated>
-      <workItem from="1720913418400" duration="39537000" />
+      <workItem from="1720913418400" duration="41961000" />
     </task>
     <servers />
   </component>
@@ -273,5 +276,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$TestGiveEndStatusBehavior.ic" NAME="TestGiveEndStatusBehavior Coverage Results" MODIFIED="1721184812617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/ShipmentTrackingSimulator$Tests_in__ShipmentTrackingSimulator_test_.ic" NAME="Tests in 'ShipmentTrackingSimulator.test' Coverage Results" MODIFIED="1721188684727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

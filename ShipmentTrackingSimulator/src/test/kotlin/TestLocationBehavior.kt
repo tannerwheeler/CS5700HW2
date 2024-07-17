@@ -4,12 +4,12 @@ import kotlin.test.assertFailsWith
 import kotlin.test.assertNotEquals
 
 class TestLocationBehavior {
-    private val s1 = CreateBehavior(mutableListOf("created", "s10001", "10002928849"))
-    private val s3 = CreateBehavior(mutableListOf("created", "tandlleslldd", "10002928849"))
+    private val s_location = CreateBehavior(mutableListOf("created", "s10001", "10002928849"))
+    private val s2_location = CreateBehavior(mutableListOf("created", "tandlleslldd", "10002928849"))
 
     @Test
     fun testBasicLocationBehavior() {
-        s1.performAction()
+        s_location.performAction()
 
         val shipment = TrackingSimulator.findShipment("s10001")
         val location = LocationBehavior(mutableListOf("location", "s10001", "10002928849", "Los Angeles, CA"))
@@ -33,7 +33,7 @@ class TestLocationBehavior {
 
     @Test
     fun testWeirdIDLocationBehavior() {
-        s3.performAction()
+        s2_location.performAction()
 
         val location = LocationBehavior(mutableListOf("location", "tandlleslldd", "10002928849", "Los Angeles, CA"))
         location.performAction()
@@ -54,6 +54,12 @@ class TestLocationBehavior {
     @Test
     fun testTooManyParametersIDLocationBehavior() {
         val block : () -> Unit = { LocationBehavior(mutableListOf("location", "tandlleslldd", "10002928849", "Los Angeles, CA", "1002255632556")) }
+        assertFailsWith<IllegalArgumentException> { block() }
+    }
+
+    @Test
+    fun testLocationBehaviorBadID() {
+        val block : () -> Unit = { LocationBehavior(mutableListOf("location", "s10006", "10002928849", "Los Angeles, CA")).performAction() }
         assertFailsWith<IllegalArgumentException> { block() }
     }
 }

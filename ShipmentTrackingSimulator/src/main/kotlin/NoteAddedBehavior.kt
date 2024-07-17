@@ -3,10 +3,15 @@ class NoteAddedBehavior(
 ) : SimulatorActionBehavior(data) {
     override var dataLength: Int = 4
 
-    override fun performAction() {
-        if (data.size < dataLength) {
-            return
+    init {
+        require(data.size == dataLength) {
+            "NoteAddedBehavior data parameter must be of size 4"
         }
-        TrackingSimulator.findShipment(data[1])?.addNote(data[3])
+    }
+
+    override fun performAction() {
+        val shipment = TrackingSimulator.findShipment(data[1])
+        require(shipment != null) { "Could not find Shipment during NoteAddedBehavior" }
+        shipment.addNote(data[3])
     }
 }
